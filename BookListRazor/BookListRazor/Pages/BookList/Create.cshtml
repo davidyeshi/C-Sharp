@@ -17,8 +17,9 @@
             <div class="col-6">
                 <input asp-for="Book.Name" class="form-control" />
             </div>
+            <span asp-validation-for="Book.Name" class="text-danger"></span>
+
         </div>
-        <span asp-validation-for="Book.Name" class="text-danger"></span>
         <div class="form-group row">
             <div class="col-3">
                 <label asp-for="Book.Author"></label>
@@ -50,3 +51,6 @@
     </form>
 </div>
 
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
